@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Одностраничный сайт услуг</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="content">
+            <h1>Добро пожаловать!</h1>
+            <p>   Это просто красиво оформленный одностраничный сайт.</p>
+            <div class="contact-info">
+                <p>Телефон: +77789208857</p>
+                <p>Email: <a href="mailto:forcallofduty38@gmail.com">forcallofduty38@gmail.com</a></p>
+            </div>
+            <a href="https://drive.google.com/file/d/1FkrCxl1elIhzTAUKxGIt7fMkDjb7PUwF/view" class="btn" target="_blank">Узнать больше</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="content">
+            <h2>Обо мне</h2>
+            <p>Я – Студент AITU College, увлеченный изучением информационных технологий и программирования. также окончил
+                там 1 курс колледжа и прохожу ознакомительную практику. Этот сайт я написал после того как прошел онлайн-курс
+                по программированию на основе HTML и CSS. Кстате этот одностраничный сайт был написан на этом языке 
+                программирования. Это одностраничный сайт услуг, здесь (я) вам расскажу и покажу как решить (почти) любую вашу
+                проблему и после этого можете отдохнуть в известном сайте для релакса.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="content">
+            <h2>Услуги</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3><a href="https://chatgpt.com/" target="_blank">Услуга 1</a></h3>
+                    <p>Решение ваших проблем</p>
+                </div>
+                <div class="service-item">
+                    <h3><a href="https://m.youtube.com/?hl=ru" target="_blank">Услуга 2</a></h3>
+                    <p>Визуальное решение ваших проблем</p>
+                </div>
+                <div class="service-item">
+                    <h3><a href="https://steam.com/" target="_blank">Услуга 3</a></h3>
+                    <p>Место удовольствия</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h2>Контакты</h2>
+            <p>Свяжитесь со мной через форму обратной связи или по телефону.
+                (Но пожалуйста потом забудьте мой номер и почту!)</p>
+            <form action="send_mail.php" method="post">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Одностраничный сайт услуг. Все права защищены.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
